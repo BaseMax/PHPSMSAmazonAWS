@@ -2,6 +2,22 @@
 
 A quick example of sending SMS with AWS SNS Using Amazon Service. 
 
+## How to Config PHP SNS AWS SMS
+
+Modify following line at `amazon-aws-sms.php` file:
+
+```
+$KEY=''; // PUT HERE WITH YOUR SECRET KEY
+$SECRET=''; // PUT HERE WITH YOUR SECRET VALUE
+```
+
+## AWS SNS Supported Regions and countries
+
+Currently, Amazon SNS supports SMS messaging in the following AWS Regions:
+https://docs.aws.amazon.com/sns/latest/dg/sns-supported-regions-countries.html
+
+Read more: https://docs.aws.amazon.com/sns/latest/dg/sns-mobile-phone-number-as-subscriber.html
+
 ### Output
 
 #### var_dump output
