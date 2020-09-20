@@ -11,6 +11,12 @@ $KEY=''; // PUT HERE WITH YOUR SECRET KEY
 $SECRET=''; // PUT HERE WITH YOUR SECRET VALUE
 ```
 
+## Installing Amazon SDK using composer
+
+```
+composer require aws/aws-sdk-php
+```
+
 ## AWS SNS Supported Regions and countries
 
 Currently, Amazon SNS supports SMS messaging in the following AWS Regions:
