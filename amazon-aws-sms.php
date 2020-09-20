@@ -17,3 +17,21 @@ $parameters = [
         'key' => $KEY,
     ],
 ];
+$sns = new \Aws\Sns\SnsClient($parameters);
+$arguments = [
+    "MessageAttributes" => [
+        'AWS.SNS.SMS.SMSType' => [
+            'DataType' => 'String',
+            'StringValue' => 'Transactional'
+        ],
+        'AWS.SNS.SMS.SenderID' => [
+            'DataType' => 'String',
+            'StringValue' => 'GitHub'
+        ],
+    ],
+    "Message" => "Hi,\nGood news for the Open Source Friday coming soon.\nWith kind regards,\nThe GitHub Open Source Team,\nMax Base",
+    "PhoneNumber" => "46720252169",
+];
+$result = $sns->publish($arguments);
+var_dump($result);
+print_r($result);
